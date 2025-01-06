@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 2em;
+    padding: 2em;
+    background: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    /* text-decoration: line-through; */
+}
+
+span {
+    padding-left: 0.5em;
+}
