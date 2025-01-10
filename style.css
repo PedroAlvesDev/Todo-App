@@ -6,19 +6,27 @@
 body {
     margin: 2em;
     padding: 2em;
-    background: #e4e4e4;
+    color: #ee7620;
+    background: #261c1e;
     display: flex;
     flex-direction: column;
 }
 
-ul {
-    list-style: none;
+h2 {
+    margin: 1em 0;
 }
 
-li {
-    /* text-decoration: line-through; */
+label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
-span {
-    padding-left: 0.5em;
+.task-item p {
+    text-decoration: none;
 }
+
+.complete {
+    text-decoration: line-through;
+}
+

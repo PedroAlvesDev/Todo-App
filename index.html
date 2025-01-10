@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2be6686047.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -13,16 +15,16 @@
 
     <div class="task-input">
         <input type="text" name="task" id="task" placeholder="Add New Task">
-        <button onclick="AddTask()">+</button>
+        <button onclick="addTask()">+</button>
     </div>
 
     <div class="task-box">
         <h2>Tasks:</h2>
-        <ul>
-            <li>
-                <input type="checkbox"><span>Task</span>
-            </li>
-        </ul>
+        <label class="task-item"><input type="checkbox">
+            <p>Task Teste</p><button class="delete-task"><i class="fa-solid fa-trash-can"
+                    aria-hidden="true"></i></button>
+        </label>
+
     </div>
 
     <script src="script.js"></script>
