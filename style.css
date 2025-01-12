@@ -16,6 +16,18 @@ h2 {
     margin: 1em 0;
 }
 
+.task-input input {
+    background: #261c1e;
+    color: #ececec;
+    font-style: italic;
+    border: solid #ee7620 0.1em;
+    width: 20em;
+    height: 2em;
+    font-family: sans-serif, Arial;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 label {
     display: flex;
     align-items: center;
@@ -23,10 +35,15 @@ label {
 }
 
 .task-item p {
+    color: #ececec;
     text-decoration: none;
+    min-width: 8em;
+    font-style: italic;
+    font-family: sans-serif, Arial;
+    font-weight: 700;
 }
 
 .complete {
-    text-decoration: line-through;
+    text-decoration: line-through solid #00ff00 2px;
 }
 
