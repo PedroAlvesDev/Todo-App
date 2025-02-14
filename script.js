@@ -47,4 +47,3 @@ function completeTask(e) {
         e.target.closest('.task-item').classList.toggle('complete');
     };
 };
-
