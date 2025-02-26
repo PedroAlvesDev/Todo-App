@@ -16,24 +16,32 @@ h2 {
     margin: 1em 0;
 }
 
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    max-width: max-content;
+}
+
 .task-input input {
     background: #261c1e;
     color: #ececec;
     font-style: italic;
     border: solid #ee7620 0.1em;
-    width: 20em;
+    min-width: 16em;
     height: 2em;
     font-family: sans-serif, Arial;
-    font-size: 14px;
+    font-size: 1em;
     font-weight: 700;
 }
 
 .task-input button {
     background: transparent;
     color: #ee7620;
-    border: none;
+    border: solid #ee7620 1px;
+    padding: 5px;
     font-size: 1em;
     text-align:justify;
+    margin-left: 10px;
 }
 
 .task-box button {
@@ -54,7 +62,14 @@ label {
     min-width: 8em;
     font-style: italic;
     font-family: sans-serif, Arial;
-    font-weight: 700;
+    font-weight: 500;
+    padding: 5px;
+    margin: 6px;
+    border: solid 1px #ececec;
+}
+
+.task-item i {
+    margin: 0 10px;
 }
 
 .complete {

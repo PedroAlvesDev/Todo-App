@@ -4,8 +4,8 @@ let list = document.querySelector('.task-box');
 function addTask() {
     let taskValue = newTask.value.trim();
 
-    if(taskValue.length == 0) {
-        alert(`Digite uma tarefa válida!`);
+    if (taskValue.length == 0) {
+        alert(`Enter a valid task!`);
     } else {
         let labelTask = document.createElement('label');
         labelTask.classList.add('task-item');
@@ -20,30 +20,51 @@ function addTask() {
         buttonTrash.classList.add('delete-task');
 
         let trashItem = document.createElement('i');
-        trashItem.classList.add('fa-solid');
-        trashItem.classList.add('fa-trash-can');
+        trashItem.classList.add('fa-solid', 'fa-trash-can');
+
+        let buttonEdit = document.createElement('button');
+        buttonEdit.classList.add('edit-task')
+
+        let editItem = document.createElement('i');
+        editItem.classList.add('fa-solid', 'fa-pen');
+
+        buttonEdit.appendChild(editItem);
+        buttonTrash.appendChild(trashItem);
 
         labelTask.appendChild(inputTask);
         labelTask.appendChild(parTask);
-        buttonTrash.appendChild(trashItem);
+        labelTask.appendChild(buttonEdit);
         labelTask.appendChild(buttonTrash);
 
         list.appendChild(labelTask);
 
-        trashItem.addEventListener('click', deleteTask);
-        list.addEventListener('click', completeTask);
+        inputTask.addEventListener('change', completeTask);
+        buttonTrash.addEventListener('click', deleteTask);
+        buttonEdit.addEventListener('click', editTask);
     };
-    
     newTask.value = '';
     newTask.focus();
+
 };
+
+function editTask(e) {
+    let taskItem = e.target.closest('.task-item');
+    let parTask = taskItem.querySelector('p');
+
+    let newText = prompt('Edit your task..', parTask.innerText);
+    if (newText !== null && newText.trim() !== '') {
+        parTask.innerText = newText.trim();
+    }
+};
+
 function deleteTask(e) {
-    let addTask = e.target.closest('.task-item');
-    addTask.remove();
+    let taskItem = e.target.closest('.task-item');
+    if (taskItem) {
+        taskItem.remove();
+    };
 };
 
 function completeTask(e) {
-    if(e.target.type === 'checkbox') {
-        e.target.closest('.task-item').classList.toggle('complete');
-    };
+    e.target.closest('.task-item').classList.toggle('complete');
 };
+
