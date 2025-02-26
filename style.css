@@ -1,78 +1,123 @@
-*{
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Configuração do corpo */
 body {
     margin: 2em;
     padding: 2em;
-    color: #ee7620;
+    color: #f5f0f0;
     background: #261c1e;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Títulos */
 h2 {
     margin: 1em 0;
+    color: #d9b8c4;
 }
 
+/* Entrada de tarefas */
 .task-input {
     display: flex;
     justify-content: space-between;
-    max-width: max-content;
+    max-width: 100%;
+    gap: 10px;
 }
 
 .task-input input {
-    background: #261c1e;
-    color: #ececec;
+    background: #403033;
+    color: #f5f0f0;
     font-style: italic;
-    border: solid #ee7620 0.1em;
+    border: solid #a65c68 0.1em;
     min-width: 16em;
-    height: 2em;
-    font-family: sans-serif, Arial;
+    height: 2.5em;
     font-size: 1em;
     font-weight: 700;
+    padding: 0 10px;
+    border-radius: 6px;
 }
 
 .task-input button {
-    background: transparent;
-    color: #ee7620;
-    border: solid #ee7620 1px;
-    padding: 5px;
-    font-size: 1em;
-    text-align:justify;
-    margin-left: 10px;
-}
-
-.task-box button {
-    background: transparent;
-    color: #ee7620;
+    background: #a65c68;
+    color: white;
     border: none;
+    padding: 8px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
 }
 
+.task-input button:hover {
+    background: #8c4a58;
+}
+
+/* Caixa de tarefas */
+.task-box {
+    margin-top: 1.5em;
+    padding: 16px;
+    background: #403033;
+    border-radius: 10px;
+}
+
+/* Estilos das tarefas */
+.task-item {
+    background: #d9b8c4;
+    color: #261c1e;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+}
+
+.task-item p {
+    color: #261c1e;
+    font-style: italic;
+    font-weight: 500;
+    padding: 5px;
+    margin: 6px;
+    border: solid 1px #261c1e;
+    min-width: 8em;
+}
+
+/* Botões das tarefas */
+.task-item button {
+    background: transparent;
+    color: #a65c68;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.task-item button:hover {
+    color: #8c4a58;
+}
+
+/* Ícones */
+.task-item i {
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/* Checkbox e rótulos */
 label {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    cursor: pointer;
 }
 
-.task-item p {
-    color: #ececec;
-    text-decoration: none;
-    min-width: 8em;
-    font-style: italic;
-    font-family: sans-serif, Arial;
-    font-weight: 500;
-    padding: 5px;
-    margin: 6px;
-    border: solid 1px #ececec;
-}
-
-.task-item i {
-    margin: 0 10px;
-}
-
+/* Tarefa concluída */
 .complete {
     text-decoration: line-through solid #810000 2px;
+    opacity: 0.6;
 }
-
