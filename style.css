@@ -5,12 +5,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #261c1e;
+    --bg-taskbox-color: #403033;
+    --button-color: #a65c68;
+    --button-hover-color: #8c4a58;
+    --text-color: #f5f0f0;
+    --title-color: #d9b8c4;
+    --border-color: #d9b8c4;
+    --completed-task-color: #810000;
+}
+
 /* Configuração do corpo */
 body {
     margin: 2em;
     padding: 2em;
-    color: #f5f0f0;
-    background: #261c1e;
+    color: var(--text-color);
+    background: var(--primary-color);
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
@@ -19,7 +30,7 @@ body {
 /* Títulos */
 h2 {
     margin: 1em 0;
-    color: #d9b8c4;
+    color: var(--title-color);
 }
 
 /* Entrada de tarefas */
@@ -31,10 +42,10 @@ h2 {
 }
 
 .task-input input {
-    background: #403033;
-    color: #f5f0f0;
+    background: var(--bg-taskbox-color);
+    color: var(--text-color);
     font-style: italic;
-    border: solid #a65c68 0.1em;
+    border: solid var(--border-color) 0.1em;
     min-width: 16em;
     height: 2.5em;
     font-size: 1em;
@@ -44,8 +55,8 @@ h2 {
 }
 
 .task-input button {
-    background: #a65c68;
-    color: white;
+    background: var(--button-color);
+    color: var(--text-color);
     border: none;
     padding: 8px 12px;
     font-size: 1em;
@@ -55,21 +66,21 @@ h2 {
 }
 
 .task-input button:hover {
-    background: #8c4a58;
+    background: var(--button-hover-color);
 }
 
 /* Caixa de tarefas */
 .task-box {
     margin-top: 1.5em;
     padding: 16px;
-    background: #403033;
+    background: var(--bg-taskbox-color);
     border-radius: 10px;
 }
 
 /* Estilos das tarefas */
 .task-item {
-    background: #d9b8c4;
-    color: #261c1e;
+    background: var(--title-color);
+    color: var(--primary-color);
     padding: 10px;
     margin-bottom: 8px;
     border-radius: 8px;
@@ -80,7 +91,7 @@ h2 {
 }
 
 .task-item p {
-    color: #261c1e;
+    color: var(--primary-color);
     font-style: italic;
     font-weight: 500;
     padding: 5px;
@@ -91,14 +102,14 @@ h2 {
 /* Botões das tarefas */
 .task-item button {
     background: transparent;
-    color: #a65c68;
+    color: var(--button-color);
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
 .task-item button:hover {
-    color: #8c4a58;
+    color: var(--button-hover-color);
 }
 
 /* Ícones */
@@ -117,6 +128,6 @@ label {
 
 /* Tarefa concluída */
 .complete {
-    text-decoration: line-through solid #810000 2px;
+    text-decoration: line-through solid var(--completed-task-color) 2px;
     opacity: 0.6;
 }
