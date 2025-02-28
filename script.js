@@ -1,3 +1,6 @@
+const theme = document.getElementById('theme');
+const body = document.getElementById('root');
+
 let newTask = document.querySelector('input#task');
 let list = document.querySelector('.task-box');
 
@@ -68,3 +71,34 @@ function completeTask(e) {
     e.target.closest('.task-item').classList.toggle('complete');
 };
 
+// moon <i class="fa-solid fa-moon"></i>
+// sun <i class="fa-solid fa-sun"></i>
+
+function lightMode() {
+    theme.classList.remove('fa-moon');
+    theme.classList.add('fa-sun');
+    body.classList.add('light');
+};
+
+function darkMode() {
+    theme.classList.remove('fa-sun');
+    theme.classList.add('fa-moon');
+    body.classList.remove('light');
+};
+
+
+if (localStorage.getItem('theme') === 'dark') {
+    darkMode();
+} else {
+    lightMode();
+};
+
+theme.addEventListener('click', () => {
+    if (theme.classList.contains('fa-moon')) {
+        lightMode();
+        localStorage.setItem('theme', 'light');
+    } else {
+        darkMode();
+        localStorage.setItem('theme', 'dark');
+    };
+});

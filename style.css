@@ -27,6 +27,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+header i {
+    font-size: 1.2em;
+    cursor: pointer;
+}
 /* Títulos */
 h2 {
     margin: 1em 0;
@@ -130,4 +141,20 @@ label {
 .complete {
     text-decoration: line-through solid var(--completed-task-color) 2px;
     opacity: 0.6;
+}
+
+footer {
+    position: relative;
+}
+
+
+.light#root {
+    --primary-color: #f5f0f0; /* Fundo principal mais claro */
+    --bg-taskbox-color: #e4d7dc; /* Fundo da caixa de tarefas */
+    --button-color: #a65c68; /* Botões principais */
+    --button-hover-color: #8c4a58; /* Efeito hover nos botões */
+    --text-color: #261c1e; /* Cor principal do texto */
+    --title-color: #6b3e47; /* Cor dos títulos */
+    --border-color: #a65c68; /* Bordas e destaques */
+    --completed-task-color: #b22222; /* Tarefa concluída */
 }
