@@ -71,9 +71,6 @@ function completeTask(e) {
     e.target.closest('.task-item').classList.toggle('complete');
 };
 
-// moon <i class="fa-solid fa-moon"></i>
-// sun <i class="fa-solid fa-sun"></i>
-
 function lightMode() {
     theme.classList.remove('fa-moon');
     theme.classList.add('fa-sun');
