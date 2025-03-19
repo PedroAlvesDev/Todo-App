@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-color: #261c1e;
-    --bg-taskbox-color: #403033;
-    --button-color: #a65c68;
-    --button-hover-color: #8c4a58;
-    --text-color: #f5f0f0;
-    --title-color: #d9b8c4;
-    --border-color: #d9b8c4;
-    --completed-task-color: #810000;
+    --primary-color: #261c1e; /* Fundo principal */
+    --bg-taskbox-color: #403033; /* Fundo da caixa de tarefas */
+    --button-color: #a65c68; /* Botões principais */
+    --button-hover-color: #8c4a58; /* Efeito hover nos botões */
+    --text-color: #f5f0f0; /* Cor principal do texto */
+    --title-color: #d9b8c4; /* Cor dos títulos */
+    --border-color: #d9b8c4; /* Bordas e destaques */
+    --completed-task-color: #810000; /* Tarefa concluída */
 }
 
 /* Configuração do corpo */
@@ -82,6 +82,17 @@ h2 {
 
 .task-input button:hover {
     background: var(--button-hover-color);
+}
+
+/* Time */
+.time {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    justify-content: space-between;
+    font-style: italic;
 }
 
 /* Caixa de tarefas */

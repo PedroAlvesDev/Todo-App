@@ -1,6 +1,10 @@
 const theme = document.getElementById('theme');
 const body = document.getElementById('root');
 
+const hour = document.querySelector('#hours');
+const min = document.querySelector('#minutes');
+const sec = document.querySelector('#seconds');
+
 let newTask = document.querySelector('input#task');
 let list = document.querySelector('.task-box');
 
@@ -47,13 +51,11 @@ function addTask() {
     };
     newTask.value = '';
     newTask.focus();
-
 };
 
 function editTask(e) {
     let taskItem = e.target.closest('.task-item');
     let parTask = taskItem.querySelector('p');
-
     let newText = prompt('Edit your task..', parTask.innerText);
     if (newText !== null && newText.trim() !== '') {
         parTask.innerText = newText.trim();
@@ -83,7 +85,6 @@ function darkMode() {
     body.classList.remove('light');
 };
 
-
 if (localStorage.getItem('theme') === 'dark') {
     darkMode();
 } else {
@@ -99,3 +100,18 @@ theme.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     };
 });
+
+setInterval(() => {
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+
+    hour.innerHTML = `${(formatTime(hours))}`;
+    min.innerHTML = `${(formatTime(minutes))}`;
+    sec.innerHTML = `${(formatTime(seconds))}`;
+}, 1000);
+
+function formatTime(time) {
+    return time < 10 ? "0" +  time : time
+};
