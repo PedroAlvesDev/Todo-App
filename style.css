@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 header {
@@ -43,7 +43,7 @@ header i {
 h2 {
     margin: 1em 0;
     color: var(--title-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 /* Entrada de tarefas */
@@ -65,7 +65,7 @@ h2 {
     font-weight: 700;
     padding: 0 10px;
     border-radius: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .task-input button {
@@ -74,10 +74,11 @@ h2 {
     border: none;
     padding: 8px 12px;
     font-size: 1em;
+    font-weight: 600;
     cursor: pointer;
     border-radius: 6px;
     transition: 0.3s ease-in-out;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .task-input button:hover {
@@ -85,8 +86,9 @@ h2 {
 }
 
 /* Time */
-.time {
+.date {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -101,7 +103,7 @@ h2 {
     padding: 16px;
     background: var(--bg-taskbox-color);
     border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 /* Estilos das tarefas */
@@ -115,7 +117,7 @@ h2 {
     align-items: center;
     justify-content: space-between;
     transition: 0.3s ease-in-out;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .task-item p {
@@ -125,7 +127,7 @@ h2 {
     padding: 5px;
     margin: 6px;
     min-width: 8em;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 /* Botões das tarefas */
@@ -135,7 +137,7 @@ h2 {
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .task-item button:hover {

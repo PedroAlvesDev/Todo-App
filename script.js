@@ -4,6 +4,7 @@ const body = document.getElementById('root');
 const hour = document.querySelector('#hours');
 const min = document.querySelector('#minutes');
 const sec = document.querySelector('#seconds');
+const day = document.querySelector('#today');
 
 let newTask = document.querySelector('input#task');
 let list = document.querySelector('.task-box');
@@ -106,12 +107,17 @@ setInterval(() => {
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
+    
 
     hour.innerHTML = `${(formatTime(hours))}`;
     min.innerHTML = `${(formatTime(minutes))}`;
     sec.innerHTML = `${(formatTime(seconds))}`;
+    day.innerHTML = `${date.getDate()} / ${formatTime(date.getMonth() +1)} / ${date.getFullYear()}`;
+
 }, 1000);
 
 function formatTime(time) {
     return time < 10 ? "0" +  time : time
 };
+
+

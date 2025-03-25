@@ -7,7 +7,6 @@
 * **Excluir Tarefas:** Clique no ícone de lixeira para remover uma tarefa da lista.
 * **Marcar Tarefas como Concluídas:** Clique na caixa de seleção ao lado da tarefa para marcá-la como concluída.
 * **Modo Claro/Escuro:** Alterne entre os modos claro e escuro clicando no ícone de lua/sol no cabeçalho.
-* **Relógio em Tempo Real:** Um relógio digital exibe a hora atual na interface.
 * **Persistência de tema:** O tema escolhido é salvo no local storage do navegador.
 
 ## Tecnologias Utilizadas
@@ -35,11 +34,8 @@ Todo-App/
 
 ## Melhorias futuras
 
-* Exibir a data abaixo do relógio, incluindo o dia da semana, o dia do mês e o mês.
-* Implementar um sistema de alarmes que permita aos usuários definir horários para serem notificados.
 * Criar um temporizador que realize contagem regressiva.
 * Implementar um cronômetro que realize contagem crescente.
-
 * Adicionar persistência de dados com Local Storage.
 * Adicionar filtros para as tarefas.
 * Melhorar a responsividade para dispositivos móveis.
