@@ -6,14 +6,22 @@
 }
 
 :root {
-    --primary-color: #261c1e; /* Fundo principal */
-    --bg-taskbox-color: #403033; /* Fundo da caixa de tarefas */
-    --button-color: #a65c68; /* Botões principais */
-    --button-hover-color: #8c4a58; /* Efeito hover nos botões */
-    --text-color: #f5f0f0; /* Cor principal do texto */
-    --title-color: #d9b8c4; /* Cor dos títulos */
-    --border-color: #d9b8c4; /* Bordas e destaques */
-    --completed-task-color: #810000; /* Tarefa concluída */
+    --primary-color: #261c1e;
+    /* Fundo principal */
+    --bg-taskbox-color: #403033;
+    /* Fundo da caixa de tarefas */
+    --button-color: #a65c68;
+    /* Botões principais */
+    --button-hover-color: #8c4a58;
+    /* Efeito hover nos botões */
+    --text-color: #f5f0f0;
+    /* Cor principal do texto */
+    --title-color: #d9b8c4;
+    /* Cor dos títulos */
+    --border-color: #d9b8c4;
+    /* Bordas e destaques */
+    --completed-task-color: #810000;
+    /* Tarefa concluída */
 }
 
 /* Configuração do corpo */
@@ -39,6 +47,7 @@ header i {
     font-size: 1.2em;
     cursor: pointer;
 }
+
 /* Títulos */
 h2 {
     margin: 1em 0;
@@ -168,14 +177,34 @@ footer {
     position: relative;
 }
 
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        margin: auto;
+        min-width: 360px;
+    }
+
+    .task-input {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 .light#root {
-    --primary-color: #f5f0f0; /* Fundo principal mais claro */
-    --bg-taskbox-color: #e4d7dc; /* Fundo da caixa de tarefas */
-    --button-color: #a65c68; /* Botões principais */
-    --button-hover-color: #8c4a58; /* Efeito hover nos botões */
-    --text-color: #261c1e; /* Cor principal do texto */
-    --title-color: #6b3e47; /* Cor dos títulos */
-    --border-color: #a65c68; /* Bordas e destaques */
-    --completed-task-color: #b22222; /* Tarefa concluída */
+    --primary-color: #f5f0f0;
+    /* Fundo principal mais claro */
+    --bg-taskbox-color: #e4d7dc;
+    /* Fundo da caixa de tarefas */
+    --button-color: #a65c68;
+    /* Botões principais */
+    --button-hover-color: #8c4a58;
+    /* Efeito hover nos botões */
+    --text-color: #261c1e;
+    /* Cor principal do texto */
+    --title-color: #6b3e47;
+    /* Cor dos títulos */
+    --border-color: #a65c68;
+    /* Bordas e destaques */
+    --completed-task-color: #b22222;
+    /* Tarefa concluída */
 }
